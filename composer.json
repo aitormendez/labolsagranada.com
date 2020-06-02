@@ -28,6 +28,46 @@
       "type": "composer",
       "url": "https://wpackagist.org",
       "only": ["wpackagist-plugin/*", "wpackagist-theme/*"]
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "advanced-custom-fields/advanced-custom-fields-pro",
+        "version": "5.8.9",
+        "type": "wordpress-plugin",
+        "dist": {
+          "type": "zip",
+          "url": "https://connect.advancedcustomfields.com/index.php?a=download&p=pro&k={%ACF_PRO_KEY}&t={%version}"
+        },
+        "require": {
+          "composer/installers": "^1.4",
+          "ffraenz/private-composer-installer": "^4.0"
+        }
+      }
+    },
+    {
+      "type": "package",
+      "package": {
+          "name": "analogmemory/wp-sync-db",
+          "type": "wordpress-plugin",
+          "version": "1.6",
+          "dist": {
+              "type": "zip",
+              "url": "https://github.com/AnalogMemory/wp-sync-db/archive/master.zip"
+          }
+      }
+    },
+    {
+      "type": "package",
+      "package": {
+          "name": "wp-sync-db/wp-sync-db-media-files",
+          "type": "wordpress-plugin",
+          "version": "master",
+          "dist": {
+              "type": "zip",
+              "url": "https://github.com/wp-sync-db/wp-sync-db-media-files/archive/master.zip"
+          }
+      }
     }
   ],
   "require": {
