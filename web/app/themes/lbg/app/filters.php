@@ -89,3 +89,12 @@ add_filter('comments_template', function ($comments_template) {
 
     return $comments_template;
 }, 100);
+
+/**
+ * woocommerce gallery https://discourse.roots.io/t/woocommerce-zoom-and-image-galleries-with-sage/9387/5
+ */
+add_action( 'after_setup_theme', function() {
+    add_theme_support( 'wc-product-gallery-zoom' );
+    add_theme_support( 'wc-product-gallery-lightbox' );
+    add_theme_support( 'wc-product-gallery-slider' );
+  } );
