@@ -5,3 +5,18 @@
 .banner .nav a {
   @extend .nav-link;
 }
+
+.hamburger {
+  &:focus {
+    outline: none;
+
+    .hamburger-inner {
+      background-color: theme-color("a");
+
+      &::before,
+      &::after {
+        background-color: theme-color("a");
+      }
+    }
+  }
+}

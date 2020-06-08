@@ -3,7 +3,8 @@
 @import "~bootstrap/scss/mixins";
 
 $theme-colors: (
-  a: #ebb700
+  a: #ebb700,
+  n: #222,
 );
 
 /** Bootstrap navbar fix (https://git.io/fADqW) */
@@ -19,7 +20,10 @@ $font-family-base: $ff-sans;
 $hamburger-padding-x: 0;
 $hamburger-padding-y: 0;
 $hamburger-layer-width: 40px;
-$hamburger-layer-height: 3px;
+$hamburger-layer-height: 4px;
 $hamburger-layer-spacing: 8px;
-$hamburger-layer-color:theme-color("r");
-$hamburger-layer-border-radius: 0;
+$hamburger-layer-color:theme-color("n");
+$hamburger-layer-border-radius: 2;
+
+$spacer: 1rem;
+$trans: 0.5s;
