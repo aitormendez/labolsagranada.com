@@ -1,10 +1,25 @@
 /** Import Bootstrap functions */
 @import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/mixins";
 
 $theme-colors: (
-  primary: #525ddc
+  a: #ebb700
 );
 
 /** Bootstrap navbar fix (https://git.io/fADqW) */
 $navbar-dark-toggler-icon-bg: none;
 $navbar-light-toggler-icon-bg: none;
+
+/* fuentes */
+// $ff-serif: crimson_text, serif;
+$ff-sans: brandy, sans-serif;
+$font-family-base: $ff-sans;
+
+/** Hamburger icon */
+$hamburger-padding-x: 0;
+$hamburger-padding-y: 0;
+$hamburger-layer-width: 40px;
+$hamburger-layer-height: 3px;
+$hamburger-layer-spacing: 8px;
+$hamburger-layer-color:theme-color("r");
+$hamburger-layer-border-radius: 0;
