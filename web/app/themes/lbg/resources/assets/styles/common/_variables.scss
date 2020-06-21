@@ -5,6 +5,7 @@
 $theme-colors: (
   a: #ebb700,
   n: #222,
+  w: #eee,
 );
 
 /** Bootstrap navbar fix (https://git.io/fADqW) */
@@ -12,9 +13,9 @@ $navbar-dark-toggler-icon-bg: none;
 $navbar-light-toggler-icon-bg: none;
 
 /* fuentes */
-// $ff-serif: crimson_text, serif;
 $ff-sans: brandy, sans-serif;
 $font-family-base: $ff-sans;
+$font-family-display: brandy-gtk, sans-serif;
 
 /** Hamburger icon */
 $hamburger-padding-x: 0;

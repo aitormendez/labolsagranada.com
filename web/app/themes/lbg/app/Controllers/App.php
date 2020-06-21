@@ -30,4 +30,24 @@ class App extends Controller
         }
         return get_the_title();
     }
+
+    public function direccion()
+    {
+        $dir_1 = get_option( 'woocommerce_store_address', '' );
+        $dir_2 = get_option( 'woocommerce_store_address_2', '' );
+        $poblacion = get_option( 'woocommerce_store_city', '' );
+        $cp = get_option( 'woocommerce_store_postcode', '' );
+
+        $output = [
+            'dir_1' => $dir_1,
+            'poblacion' => $poblacion,
+            'cp' => $cp,
+        ];
+
+        if($dir_2 != '') {
+            $output += ['dir_2' => $dir_2];
+        }
+
+        return $output;
+    }
 }
