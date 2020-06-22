@@ -10,7 +10,9 @@
  * @see https://github.com/webpack-contrib/sass-loader#imports
  */
 // @import "~some-node-module";
-@import "~hamburgers/_sass/hamburgers/hamburgers";
+// @import "~hamburgers/_sass/hamburgers/hamburgers";
+@import "~tippy.js/dist/tippy.css";
+@import "~tippy.js/animations/scale.css";
 
 /** Import theme styles */
 @import "common/global";

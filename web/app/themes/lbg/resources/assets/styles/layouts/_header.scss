@@ -1,3 +1,5 @@
+/* stylelint-disable no-descending-specificity */
+
 .banner .nav li {
   @extend .nav-item;
 }
@@ -11,6 +13,14 @@
       font-size: 3rem;
       margin-bottom: 0;
       line-height: 1em;
+
+      a {
+        color: theme-color("b");
+
+        &:hover {
+          color: theme-color("n");
+        }
+      }
     }
 
     .descrip {
@@ -28,6 +38,20 @@
 
       font-size: 2em;
       color: theme-color("n");
+    }
+  }
+
+  .nav-tienda {
+    padding-bottom: 1rem;
+
+    p {
+      color: theme-color("b");
+      margin-bottom: 0;
+      margin-top: 0;
+
+      &.tel {
+        font-size: 1.5rem;
+      }
     }
   }
 }

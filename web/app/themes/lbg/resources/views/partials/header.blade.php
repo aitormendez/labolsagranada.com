@@ -6,19 +6,26 @@
       </div>
 
       <div class="brand bg-a col-12 my-0">
-        @dump($direccion)
         <p class="nombre">
-          <a class="text-w" href="{{ home_url('/') }}">
+          <a href="{{ home_url('/') }}">
             {{ get_bloginfo('name') }}
           </a>
         </p>
-        <p class="descrip text-w">{{ get_bloginfo('description') }}</p>
+        <p class="descrip text-b">{{ get_bloginfo('description') }}</p>
       </div>
 
-      <nav class="nav-tienda bg-a col-12">
+      <nav class="nav-tienda bg-a col-12 text-center">
         @if (has_nav_menu('tienda_navigation'))
           {!! wp_nav_menu(['theme_location' => 'tienda_navigation', 'menu_class' => 'nav']) !!}
         @endif
+        <div class="direccion d-inline-block">
+          <p class="tel">{!! $direccion['tel'] !!}</p>
+          <p class="dir1">{!! $direccion['dir_1'] !!}</p>
+          @if (isset($direccion['dir_2']))
+            <p class="dir2">{!! $direccion['dir_2'] !!}</p>
+          @endif
+          <p class="pobla">{!! $direccion['cp'] !!}. {!! $direccion['poblacion'] !!}</p>
+        </div>
       </nav>
 
       <nav class="nav-primary col-12">

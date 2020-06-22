@@ -17,7 +17,7 @@ class lbg_navwalker extends \Walker_Nav_Menu {
 
         //Add SPAN if no Permalink
         if( $permalink && $permalink != '#' ) {
-            $output .= '<a href="' . $permalink . '" aria-label="'. $title .'">';
+            $output .= '<a href="' . $permalink . '" data-tippy-content="'. $title .'">';
         } else {
             $output .= '<div>';
         }
