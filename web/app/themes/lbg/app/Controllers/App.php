@@ -37,11 +37,14 @@ class App extends Controller
         $dir_2 = get_option( 'woocommerce_store_address_2', '' );
         $poblacion = get_option( 'woocommerce_store_city', '' );
         $cp = get_option( 'woocommerce_store_postcode', '' );
+        $tel = get_option( 'woocommerce_store_phone', '' );
+
 
         $output = [
             'dir_1' => $dir_1,
             'poblacion' => $poblacion,
             'cp' => $cp,
+            'tel' => $tel,
         ];
 
         if($dir_2 != '') {

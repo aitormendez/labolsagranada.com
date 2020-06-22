@@ -98,3 +98,31 @@ add_action( 'after_setup_theme', function() {
     add_theme_support( 'wc-product-gallery-lightbox' );
     add_theme_support( 'wc-product-gallery-slider' );
   } );
+
+/**
+ * woocommerce. añadir campo teléfono a WC
+ * https://es.wordpress.org/support/topic/telefono-de-la-tienda/
+ */
+
+add_filter('woocommerce_general_settings', function($settings) {
+    $key = 0;
+
+    foreach( $settings as $values ){
+        $new_settings[$key] = $values;
+        $key++;
+
+        // Inserting array just after the post code in "Store Address" section
+        if($values['id'] == 'woocommerce_store_postcode'){
+            $new_settings[$key] = array(
+                'title'    => __('Phone Number'),
+                'desc'     => __('Optional phone number of your business office'),
+                'id'       => 'woocommerce_store_phone', // <= The field ID (important)
+                'default'  => '',
+                'type'     => 'text',
+                'desc_tip' => true, // or false
+            );
+            $key++;
+        }
+    }
+    return $new_settings;
+});
