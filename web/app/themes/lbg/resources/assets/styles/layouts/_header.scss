@@ -1,15 +1,29 @@
 /* stylelint-disable no-descending-specificity */
+/* stylelint-disable number-no-trailing-zeros */
 
 .banner .nav li {
   @extend .nav-item;
 }
 
 .banner {
+  display: flex;
+  flex-wrap: wrap;
+
+  .campana {
+    width: 100%;
+
+    svg {
+      width: 100px;
+    }
+  }
+
   .brand {
     text-align: center;
+    width: 100%;
 
     .nombre {
       font-family: $font-family-display;
+      font-weight: 700;
       font-size: 3rem;
       margin-bottom: 0;
       line-height: 1em;
@@ -36,13 +50,26 @@
     a {
       @extend .nav-link;
 
-      font-size: 2em;
+      font-size: 2rem;
       color: theme-color("n");
+      padding: 0;
+
+      svg {
+        &.bg path {
+          fill: theme-color("a");
+        }
+      }
     }
   }
 
   .nav-tienda {
+    width: 100%;
     padding-bottom: 1rem;
+
+    a {
+      font-family: $font-family-display;
+      font-weight: 400;
+    }
 
     p {
       color: theme-color("b");
@@ -51,6 +78,132 @@
 
       &.tel {
         font-size: 1.5rem;
+      }
+    }
+  }
+
+  .nav-primary {
+    width: 100%;
+  }
+
+  @include media-breakpoint-up(md) {
+    $nav: 16rem;
+
+    .campana {
+      width: calc((100% - #{$nav}) * 0.26);
+
+      svg {
+        width: 33%;
+      }
+    }
+
+    .brand {
+      width: calc((100% - #{$nav} - 2rem) * 0.30);
+      min-width: 170px;
+      margin-left: 1rem;
+      margin-right: 1rem;
+      text-align: left;
+      padding: 2rem;
+
+      .nombre {
+        padding-bottom: 1rem;
+        margin-bottom: 1rem;
+        font-size: 2rem;
+        border-bottom: 3px solid theme-color("b");
+      }
+
+      .descrip {
+        font-size: 1.2rem;
+        line-height: 1.2em;
+      }
+    }
+
+    .nav-tienda {
+      width: calc((100% - #{$nav}) * 0.26);
+      min-width: 180px;
+      flex-grow: 1;
+      flex-shrink: 1;
+      padding: 2rem 1rem 2rem 2rem;
+
+      .nav {
+        justify-content: left;
+        padding-bottom: 1rem;
+        margin-bottom: 1rem;
+        border-bottom: 3px solid theme-color("b");
+
+        a {
+          padding: 0;
+          line-height: 1em;
+
+          &:hover {
+            color: theme-color("b");
+          }
+        }
+      }
+
+      p.tel {
+        font-size: 1rem;
+        font-weight: 900;
+      }
+    }
+
+    .nav-primary {
+      width: $nav;
+      background-color: theme-color("a");
+      padding-right: 1rem;
+      padding-top: 1rem;
+
+      .nav {
+        flex-wrap: nowrap;
+        justify-content: flex-end;
+
+        li {
+          a {
+            display: block;
+            font-size: 1.4rem;
+            text-align: center;
+            border-left: 2px solid theme-color("n");
+            border-top: 2px solid theme-color("n");
+            border-bottom: 2px solid theme-color("n");
+            width: 3rem;
+            height: 3rem;
+
+            &[data-tippy-content="Contacto"] svg {
+              margin-top: 0.5rem;
+            }
+
+            &[data-tippy-content="Carro"] svg {
+              margin-top: 0.4rem;
+              margin-left: -0.03rem;
+            }
+
+            &[data-tippy-content="Pagar compra"] svg {
+              margin-top: 0.2rem;
+            }
+
+            &[data-tippy-content="Mi cuenta"] svg {
+              margin-top: 0.2rem;
+            }
+
+            &:hover {
+              background-color: theme-color("b");
+            }
+          }
+
+          &:nth-child(3) a {
+            border-right: 2px solid theme-color("n");
+          }
+
+          &:last-child {
+            border-radius: 50%;
+            margin-left: 1rem;
+
+            a {
+              border-radius: 50%;
+              border: 2px solid theme-color("n");
+            }
+          }
+        }
       }
     }
   }
