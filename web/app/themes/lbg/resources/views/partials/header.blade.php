@@ -1,5 +1,5 @@
 <header class="banner">
-      <div class="campana bg-a py-5 text-center">
+      <div class="campana bg-a text-center">
         @svg('campana')
       </div>
 
@@ -16,7 +16,7 @@
         @if (has_nav_menu('tienda_navigation'))
           {!! wp_nav_menu(['theme_location' => 'tienda_navigation', 'menu_class' => 'nav']) !!}
         @endif
-        <div class="direccion d-inline-block">
+        <div class="direccion">
           <p class="tel">{!! $direccion['tel'] !!}</p>
           <p class="dir1">{!! $direccion['dir_1'] !!}</p>
           @if (isset($direccion['dir_2']))

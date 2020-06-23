@@ -1,4 +1,5 @@
 import tippy from 'tippy.js';
+import anime from 'animejs';
 
 export default {
   init() {
@@ -22,6 +23,68 @@ export default {
       content: 'Ir a la tienda',
       animation: 'scale',
     });
+
+    // Cabecera desplegable
+    // --------------------------------------------------------------------
+
+    let
+      banner = $('.banner');
+
+    let menu = {
+      desplegado: true,
+      cambiando: false,
+      topscroll: true,
+      plegar() {
+        banner.addClass('peq');
+      },
+      desplegar() {
+        banner.removeClass('peq');
+      },
+      offcanvas() {
+        anime({
+          targets: '.banner',
+          translateY: -250,
+          easing: 'cubicBezier(.250, .460, .450, .940)',
+          duration: 500,
+        });
+      },
+      oncanvas() {
+        anime({
+          targets: '.banner',
+          translateY: 0,
+          easing: 'cubicBezier(.250, .460, .450, .940)',
+          duration: 500,
+        });
+      },
+    }
+
+    // Dirección scroll
+    let
+      w = $(window),
+      viewportWidth = w.width(),
+      lastY = w.scrollTop();
+
+    if (viewportWidth >= 768) {
+      w.scroll(function() {
+        let
+          currY = w.scrollTop(),
+          direction = (currY > lastY) ? 'down' : 'up';
+        if (direction === 'down' && menu.cambiando == false) {
+          menu.offcanvas();
+        } else if (direction === 'up' && menu.cambiando == false) {
+          menu.oncanvas();
+        }
+        lastY = currY;
+        console.log(direction);
+        if (currY == 0) {
+          menu.desplegar();
+        } else {
+          menu.plegar();
+        }
+      });
+    } else {
+      menu.plegar();
+    } // ! viewport width
 
 
   },
