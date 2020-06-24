@@ -10,4 +10,38 @@
     font-size: 0.9rem;
     color: theme-color("n");
   }
+
+  ul.products {
+    li.product {
+      a img {
+        margin-bottom: 0;
+      }
+
+      h2 {
+        line-height: 1em;
+        border-bottom: 1px solid theme-color("n");
+      }
+
+      .price {
+        padding-top: 0.5em;
+        padding-bottom: 0.5em;
+        margin-bottom: 0;
+        border-bottom: 1px solid theme-color("n");
+      }
+
+      .add_to_cart_button {
+        border-radius: 0;
+        width: 100%;
+        margin-top: 0;
+        background-color: theme-color("g4");
+        color: theme-color("n");
+        text-align: center;
+        border-bottom: 1px solid theme-color("n");
+
+        &:hover {
+          background-color: theme-color("a");
+        }
+      }
+    }
+  }
 }

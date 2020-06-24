@@ -18,6 +18,7 @@ a {
 
 body {
   background-color: theme-color("b");
+  font-family: $ff-sans;
 
   @include media-breakpoint-up(md) {
     // .content {
@@ -65,4 +66,9 @@ h1 {
     width: 4.5em;
     height: 4.5em;
   }
+
+  .amount {
+    color: theme-color("n");
+  }
 }
+

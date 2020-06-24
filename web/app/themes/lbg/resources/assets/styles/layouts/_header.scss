@@ -104,6 +104,7 @@
 
       svg {
         width: 33%;
+        max-height: 130px;
         transition: width $trans;
       }
     }
