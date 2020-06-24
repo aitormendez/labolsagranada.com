@@ -20,3 +20,7 @@ body {
   background-color: theme-color("b");
   min-height: 3000px;
 }
+
+.trans-after-page-load {
+  transition: none !important;
+}

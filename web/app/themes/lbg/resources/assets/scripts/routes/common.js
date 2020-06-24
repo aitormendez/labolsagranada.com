@@ -5,6 +5,18 @@ export default {
   init() {
     // JavaScript to be fired on all pages
 
+    // Transitions after page load
+    // ------------------
+
+    $(document).ready(function () {
+      $('.trans-after-page-load').each(function (index, element) {
+        setTimeout(function () { $(element).removeClass('trans-after-page-load') }, 100);
+      });
+    });
+
+    // amburger
+    // ------------------
+
     $('.hamburger').click(function() {
       $(this).toggleClass('is-active');
     });
