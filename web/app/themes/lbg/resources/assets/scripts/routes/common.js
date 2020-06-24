@@ -100,6 +100,12 @@ export default {
       menu.plegar();
     } // ! viewport width
 
+    // Adaptar margin-top de content
+    // ---------------------------------
+
+    let $mt = $('#banner').outerHeight();
+    console.log($mt);
+
 
   },
   finalize() {

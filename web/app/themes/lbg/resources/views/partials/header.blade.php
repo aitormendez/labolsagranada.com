@@ -1,4 +1,4 @@
-<header class="banner">
+<header class="banner" id='banner'>
       <div class="campana bg-a text-center trans-after-page-load">
         @svg('campana')
       </div>
