@@ -53,21 +53,9 @@ export default {
         banner.removeClass('peq');
       },
       offcanvas() {
-        // anime({
-        //   targets: '.banner',
-        //   translateY: -250,
-        //   easing: 'cubicBezier(.250, .460, .450, .940)',
-        //   duration: 500,
-        // });
         banner.addClass('offcanvas');
       },
       oncanvas() {
-        // anime({
-        //   targets: '.banner',
-        //   translateY: 0,
-        //   easing: 'cubicBezier(.250, .460, .450, .940)',
-        //   duration: 500,
-        // });
         banner.removeClass('offcanvas');
       },
     }
@@ -89,7 +77,6 @@ export default {
           menu.oncanvas();
         }
         lastY = currY;
-        console.log(direction);
         if (currY == 0) {
           menu.desplegar();
         } else {
@@ -103,8 +90,18 @@ export default {
     // Adaptar margin-top de content
     // ---------------------------------
 
-    let $mt = $('#banner').outerHeight();
-    console.log($mt);
+    function setBannerMargin() {
+      let mt = document.getElementById('banner').clientHeight;
+      document.getElementById('content').style.marginTop = mt + 'px';
+    }
+
+    setTimeout(function () {
+      setBannerMargin()
+    }, 100);
+
+    window.onresize = function(){
+      setBannerMargin()
+    };
 
 
   },

@@ -18,7 +18,13 @@ a {
 
 body {
   background-color: theme-color("b");
-  // min-height: 3000px;
+  min-height: 3000px;
+
+  @include media-breakpoint-up(md) {
+    // .content {
+    //   margin-top: 15rem;
+    // }
+  }
 }
 
 .trans-after-page-load {
