@@ -7,7 +7,7 @@ html {
 }
 
 a {
-  color: theme-color("a");
+  color: theme-color("z");
   transition: color $trans, background-color $trans;
 
   &:hover {
@@ -53,5 +53,16 @@ h1 {
         color: theme-color("n");
       }
     }
+  }
+}
+
+.woocommerce {
+  span.onsale {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: theme-color("a");
+    width: 4.5em;
+    height: 4.5em;
   }
 }

@@ -3,13 +3,13 @@
 @section('content')
 
 <div class="container-fluid">
-
-
       @php
         do_action('get_header', 'shop');
         do_action('woocommerce_before_main_content');
       @endphp
 
+  <div class="row">
+    <div class="col-md-8 offset-md-2">
       <header class="woocommerce-products-header">
         @if(apply_filters('woocommerce_show_page_title', true))
           <h1 class="woocommerce-products-header__title page-title">{!! woocommerce_page_title(false) !!}</h1>
@@ -52,7 +52,8 @@
         do_action('get_footer', 'shop');
       @endphp
 
-
+    </div>
+  </div>
 </div>
 
 

@@ -1,5 +1,13 @@
 .post-type-archive-product {
-  // .content {
-  //   padding-top: 1rem;
-  // }
+  .woocommerce-result-count {
+    font-size: 0.9rem;
+    color: theme-color("g3");
+  }
+
+  select.orderby {
+    border: none;
+    padding: 0.5rem;
+    font-size: 0.9rem;
+    color: theme-color("n");
+  }
 }

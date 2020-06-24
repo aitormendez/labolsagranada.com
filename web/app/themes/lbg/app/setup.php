@@ -154,7 +154,7 @@ remove_action( 'woocommerce_before_main_content', 'woocommerce_output_content_wr
 remove_action( 'woocommerce_after_main_content', 'woocommerce_output_content_wrapper_end', 10);
 
 /**
- * Change several of the breadcrumb defaults
+ * Change breadcrumb defaults
  */
 add_filter( 'woocommerce_breadcrumb_defaults', function () {
     return array(
@@ -165,5 +165,14 @@ add_filter( 'woocommerce_breadcrumb_defaults', function () {
             'after'       => '',
             'home'        => _x( 'Home', 'breadcrumb', 'woocommerce' ),
         );
+});
+
+
+/**
+ * Aviso de oferta
+ */
+add_filter( 'woocommerce_sale_flash', function( $html ) {
+    $html= '<span class="onsale"><span>Oferta</span></span>';
+    return $html;
 });
 
