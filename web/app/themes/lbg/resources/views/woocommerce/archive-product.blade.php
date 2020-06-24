@@ -3,8 +3,7 @@
 @section('content')
 
 <div class="container-fluid">
-  <div class="row">
-    <div class="col-md-8 offset-md-2">
+
 
       @php
         do_action('get_header', 'shop');
@@ -53,8 +52,7 @@
         do_action('get_footer', 'shop');
       @endphp
 
-    </div>
-  </div>
+
 </div>
 
 

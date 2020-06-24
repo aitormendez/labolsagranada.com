@@ -145,3 +145,25 @@ add_action('init', function () {
         }
     });
 });
+
+
+/**
+ * Personalizar WooComerce
+ */
+remove_action( 'woocommerce_before_main_content', 'woocommerce_output_content_wrapper', 10);
+remove_action( 'woocommerce_after_main_content', 'woocommerce_output_content_wrapper_end', 10);
+
+/**
+ * Change several of the breadcrumb defaults
+ */
+add_filter( 'woocommerce_breadcrumb_defaults', function () {
+    return array(
+            'delimiter'   => ' → ',
+            'wrap_before' => '  <div class="bread row bg-white"><div class="col-md-8 offset-md-2"><nav class="woocommerce-breadcrumb" itemprop="breadcrumb">',
+            'wrap_after'  => '</nav></div></div>',
+            'before'      => '',
+            'after'       => '',
+            'home'        => _x( 'Home', 'breadcrumb', 'woocommerce' ),
+        );
+});
+

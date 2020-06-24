@@ -9,7 +9,9 @@
   top: 0;
   display: flex;
   flex-wrap: wrap;
+  background-color: theme-color("b");
   transition: top $trans;
+  z-index: 1000;
 
   .campana {
     width: 100%;
@@ -26,7 +28,7 @@
     width: 100%;
 
     .nombre {
-      font-family: $font-family-display;
+      font-family: $ff-display;
       font-weight: 700;
       font-size: 3rem;
       margin-bottom: 0;
@@ -42,7 +44,7 @@
     }
 
     .descrip {
-      font-family: $font-family-display;
+      font-family: $ff-display;
       font-size: 1.5rem;
       margin-top: 0;
     }
@@ -71,7 +73,7 @@
     padding-bottom: 1rem;
 
     a {
-      font-family: $font-family-display;
+      font-family: $ff-display;
       font-weight: 400;
     }
 

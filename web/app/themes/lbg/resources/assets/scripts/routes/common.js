@@ -97,7 +97,7 @@ export default {
 
     setTimeout(function () {
       setBannerMargin()
-    }, 100);
+    }, 70);
 
     window.onresize = function(){
       setBannerMargin()
