@@ -1,5 +1,5 @@
 import tippy from 'tippy.js';
-import anime from 'animejs';
+// import anime from 'animejs';
 
 export default {
   init() {
@@ -53,20 +53,22 @@ export default {
         banner.removeClass('peq');
       },
       offcanvas() {
-        anime({
-          targets: '.banner',
-          translateY: -250,
-          easing: 'cubicBezier(.250, .460, .450, .940)',
-          duration: 500,
-        });
+        // anime({
+        //   targets: '.banner',
+        //   translateY: -250,
+        //   easing: 'cubicBezier(.250, .460, .450, .940)',
+        //   duration: 500,
+        // });
+        banner.addClass('offcanvas');
       },
       oncanvas() {
-        anime({
-          targets: '.banner',
-          translateY: 0,
-          easing: 'cubicBezier(.250, .460, .450, .940)',
-          duration: 500,
-        });
+        // anime({
+        //   targets: '.banner',
+        //   translateY: 0,
+        //   easing: 'cubicBezier(.250, .460, .450, .940)',
+        //   duration: 500,
+        // });
+        banner.removeClass('offcanvas');
       },
     }
 
