@@ -12,12 +12,12 @@ export default {
       zoom: 13,
      });
 
-     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+     L.tileLayer('https://api.mapbox.com/styles/v1/mapbox/streets-v11/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoiYWl0b3IiLCJhIjoiY2tidWxweHBsMGt6ZDMwc3dyMW4yNzMybCJ9.7v_-1ATNoXMV4ZzNVFL_IQ', {
       subdomains: 'abcd',
       minZoom: 1,
       maxZoom: 19,
       ext: 'png',
-      attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a>',
+      attribution: '© <a href="https://www.mapbox.com/feedback/">Mapbox</a> © <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
     }).addTo(map);
 
     let miPopup = L.marker([37.1750016,-3.6056493]).addTo(map);
