@@ -1,3 +1,7 @@
+{{--
+  Template Name: Contacto
+--}}
+
 @extends('layouts.app')
 
 @section('content')
@@ -13,4 +17,11 @@
       </div-row>
     </div>
   @endwhile
+
+  <div class="content-fluid">
+    <div-row>
+      <div id="map" class="col-12">
+      </div>
+    </div-row>
+  </div>
 @endsection
