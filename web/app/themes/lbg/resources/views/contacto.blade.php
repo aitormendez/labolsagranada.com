@@ -7,6 +7,7 @@
 @section('content')
   @while(have_posts()) @php the_post() @endphp
     <div class="content-fluid">
+
       <div-row>
         <div class="col-md-8 offset-md-2">
           @include('partials.page-header')
