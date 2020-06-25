@@ -13,7 +13,7 @@ export default {
     console.log(lbg.marker);
 
     var map = L.map('map', {
-      center: [37.1750016,-3.6056493],
+      center: [37.17491, -3.60317],
       zoom: 13,
      });
 
@@ -29,10 +29,12 @@ export default {
       iconUrl: marker,
       iconSize: [28, 64],
       iconAnchor: [5, 64],
-      popupAnchor: [-3, -64],
+      popupAnchor: [10, -64],
   });
 
-  L.marker([37.1750016,-3.6056493], {icon: myIcon}).addTo(map);
+  let miPopup = L.marker([37.17491, -3.60317], {icon: myIcon}).addTo(map);
+
+  miPopup.bindPopup('<p class="popup grande">La Bolsa</p><p class="popup">Calle Buensuceso, 22</p><p class="popup">18002. Granada</p>');
 
   },
 };
