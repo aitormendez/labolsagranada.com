@@ -1,5 +1,5 @@
 import L from 'leaflet/dist/leaflet.js';
-// import 'leaflet.fullscreen/Control.FullScreen';
+import 'leaflet-fullscreen/dist/Leaflet.fullscreen.js';
 
 /* eslint-disable no-unused-vars */
 /* eslint-disable no-undef*/
@@ -13,8 +13,9 @@ export default {
     console.log(lbg.marker);
 
     var map = L.map('map', {
-      center: [37.17491, -3.60317],
+      center: [37.174846,-3.6036298],
       zoom: 13,
+      fullscreenControl: true,
      });
 
      L.tileLayer('https://api.mapbox.com/styles/v1/mapbox/streets-v11/tiles/{z}/{x}/{y}?access_token=' + lbg.mbToken, {
@@ -29,10 +30,10 @@ export default {
       iconUrl: marker,
       iconSize: [28, 64],
       iconAnchor: [5, 64],
-      popupAnchor: [10, -64],
+      popupAnchor: [10, -70],
   });
 
-  let miPopup = L.marker([37.17491, -3.60317], {icon: myIcon}).addTo(map);
+  let miPopup = L.marker([37.174846,-3.6036298], {icon: myIcon}).addTo(map);
 
   miPopup.bindPopup('<p class="popup grande">La Bolsa</p><p class="popup">Calle Buensuceso, 22</p><p class="popup">18002. Granada</p>');
 
