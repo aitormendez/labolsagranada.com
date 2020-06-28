@@ -5,6 +5,10 @@ export default {
   init() {
     // JavaScript to be fired on all pages
 
+    let
+    w = $(window),
+    viewportWidth = w.width();
+
     // Transitions after page load
     // ------------------
 
@@ -29,15 +33,17 @@ export default {
     // const tps = document.querySelectorAll('.marca');
     // const template = document.getElementById('template');
 
-    tippy('#menu-menu-1 .menu-item a', {
-      content: 'data-tippy-content',
-      animation: 'scale',
-    });
+    if (viewportWidth >= 768) {
+      tippy('#menu-tienda a', {
+        content: 'Ir a la tienda',
+        animation: 'scale',
+      });
 
-    tippy('#menu-tienda a', {
-      content: 'Ir a la tienda',
-      animation: 'scale',
-    });
+      tippy('#menu-menu-1 .menu-item a', {
+        content: 'data-tippy-content',
+        animation: 'scale',
+      });
+    }
 
     // Cabecera desplegable
     // --------------------------------------------------------------------
@@ -64,10 +70,7 @@ export default {
     }
 
     // Dirección scroll
-    let
-      w = $(window),
-      viewportWidth = w.width(),
-      lastY = w.scrollTop();
+    let lastY = w.scrollTop();
 
     if (viewportWidth >= 768) {
       w.scroll(function() {
