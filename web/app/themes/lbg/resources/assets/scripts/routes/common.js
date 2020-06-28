@@ -109,7 +109,9 @@ export default {
     }, 100);
 
     window.onresize = function() {
-      setBannerMargin()
+      if (viewportWidth >= 768) {
+        setBannerMargin()
+      }
     };
 
 
