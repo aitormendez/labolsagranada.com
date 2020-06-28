@@ -29,7 +29,8 @@ class lbg_navwalker extends \Walker_Nav_Menu {
             <span class="fa-layers fa-fw">
             <i class="' . $icon . '-bg bg" aria-hidden="true"></i>
             <i class="' . $icon . '" aria-hidden="true"></i>
-            </span>';
+            </span>
+            <span class="title">' . $title . '</span>';
             } else {
                 $output .= '<span class="epi">' . $title . '</span>';
             }

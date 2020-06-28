@@ -10,7 +10,7 @@
  * @see https://github.com/webpack-contrib/sass-loader#imports
  */
 // @import "~some-node-module";
-// @import "~hamburgers/_sass/hamburgers/hamburgers";
+@import "~hamburgers/_sass/hamburgers/hamburgers";
 @import "~tippy.js/dist/tippy.css";
 @import "~tippy.js/animations/scale.css";
 @import "~leaflet/dist/leaflet.css";
@@ -31,5 +31,6 @@
 @import "layouts/tinymce";
 @import "layouts/_wc-archive-product";
 @import "layouts/_wc-single-product";
+@import "layouts/_wc-checkout";
 @import "fonts/brandy";
 @import "fonts/brandy-gtk";

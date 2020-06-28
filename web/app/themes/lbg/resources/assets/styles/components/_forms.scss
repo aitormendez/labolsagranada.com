@@ -17,3 +17,27 @@
   @extend .btn;
   @extend .btn-secondary;
 }
+
+input[type="text"],
+input[type="email"],
+textarea {
+  color: theme-color("n");
+  border: none;
+  background-color: #fff;
+  padding: 1em;
+
+  &::placeholder {
+    color: theme-color("g3");
+  }
+
+  &:focus {
+    box-shadow: none;
+    outline: none;
+    background-color: theme-color("a");
+
+    &::placeholder {
+      color: theme-color("g3");
+    }
+  }
+}
+

@@ -26,10 +26,11 @@ $ff-display: brandy-gtk, sans-serif;
 $hamburger-padding-x: 0;
 $hamburger-padding-y: 0;
 $hamburger-layer-width: 40px;
-$hamburger-layer-height: 4px;
+$hamburger-layer-height: 3px;
 $hamburger-layer-spacing: 8px;
 $hamburger-layer-color:theme-color("n");
-$hamburger-layer-border-radius: 2;
+$hamburger-layer-border-radius: 0;
+$hamburger-hover-opacity: 1;
 
 $spacer: 1rem;
 $trans: 0.5s;

@@ -25,6 +25,10 @@ body {
     //   margin-top: 15rem;
     // }
   }
+
+  &.desplegado {
+    overflow: hidden;
+  }
 }
 
 .content {

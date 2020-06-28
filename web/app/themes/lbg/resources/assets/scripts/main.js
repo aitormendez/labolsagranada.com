@@ -128,6 +128,29 @@ var faEnvelopeBg = {
   ],
 }
 
-library.add(faFacebook, faTwitter, faInstagram, faShoppingCart, faCashRegister, faUser, faEnvelope, faEnvelopeBg, faShoppingCartBg, faCashRegisterBg, faUserBg);
-dom.watch();
+var conciergeBell = {
+  prefix: 'fal',
+  iconName: 'concierge-bell',
+  icon: [
+    512,
+    512,
+    [],
+    'e005',
+    'M504 352H480V288C480 169.69 388.21 73.04 272 64.81V32H312C316.42 32 320 28.42 320 24V8C320 3.58 316.42 0 312 0H200C195.58 0 192 3.58 192 8V24C192 28.42 195.58 32 200 32H240V64.81C123.79 73.04 32 169.69 32 288V352H8C3.58 352 0 355.58 0 360V376C0 380.42 3.58 384 8 384H504C508.42 384 512 380.42 512 376V360C512 355.58 508.42 352 504 352ZM448 352H64V288C64 187.83 142.3 103.81 242.26 96.73C259.13 95.54 252.59 95.52 269.74 96.73C369.7 103.81 448 187.83 448 288V352Z',
+  ],
+}
 
+var conciergeBellBg = {
+  prefix: 'fal',
+  iconName: 'concierge-bell-bg',
+  icon: [
+    512,
+    512,
+    [],
+    'e005',
+    'M504 352H480V288C480 169.69 388.21 73.04 272 64.81V32H312C316.42 32 320 28.42 320 24V8C320 3.58 316.42 0 312 0H200C195.58 0 192 3.58 192 8V24C192 28.42 195.58 32 200 32H240V64.81C123.79 73.04 32 169.69 32 288V352H8C3.58 352 0 355.58 0 360V376C0 380.42 3.58 384 8 384H504C508.42 384 512 380.42 512 376V360C512 355.58 508.42 352 504 352Z',
+  ],
+}
+
+library.add(faFacebook, faTwitter, faInstagram, faShoppingCart, faCashRegister, faUser, faEnvelope, faEnvelopeBg, faShoppingCartBg, faCashRegisterBg, faUserBg, conciergeBell, conciergeBellBg);
+dom.watch();

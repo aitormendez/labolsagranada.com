@@ -1,6 +1,12 @@
 /* stylelint-disable no-descending-specificity */
 /* stylelint-disable number-no-trailing-zeros */
 
+/*
+ * z-index
+ * .banner:      1000
+ * .nav-primary: 2000
+ */
+
 .banner .nav li {
   @extend .nav-item;
 }
@@ -62,7 +68,7 @@
 
       svg {
         &.bg path {
-          fill: theme-color("a");
+          fill: theme-color("b");
         }
       }
     }
@@ -86,17 +92,82 @@
         font-size: 1.5rem;
       }
     }
+
+    .direccion {
+      background-color: theme-color("b");
+      margin-left: 2rem;
+      margin-right: 2rem;
+      border-radius: 4px;
+      padding: 1rem;
+      border: 2px solid theme-color("n");
+
+      p {
+        color: theme-color("n");
+      }
+    }
   }
 
   .nav-primary {
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    top: 0;
+    left: -105vw;
+    height: 100vh;
     width: 100%;
+    background-color: theme-color("a");
+    z-index: 2000;
+    transition: left $trans;
+
+    &.desplegado {
+      left: 0;
+    }
+
+    .menu-menu-1-container {
+      width: 100%;
+    }
+
+    li {
+      width: 100%;
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .title {
+      display: block;
+      text-transform: uppercase;
+      font-size: 0.7rem;
+      font-weight: 900;
+      letter-spacing: 0.05em;
+      line-height: 0.5em;
+    }
+
+    svg path {
+      fill: theme-color("n");
+    }
+  }
+
+  .hamburger {
+    position: absolute;
+    right: 2rem;
+    top: 2rem;
+    z-index: 2001;
+
+    &:focus {
+      outline: none;
+    }
   }
 
   @include media-breakpoint-up(md) {
-    $nav: 16rem;
+    $nav: 17rem;
 
     position: fixed;
     width: 100%;
+
+    .hamburger {
+      display: none;
+    }
 
     .campana {
       width: calc((100% - #{$nav}) * 0.26);
@@ -159,9 +230,23 @@
         font-size: 1rem;
         font-weight: 900;
       }
+
+      .direccion {
+        border: none;
+        margin: 0;
+        background-color: transparent;
+        padding: 0;
+
+        p {
+          color: theme-color("b");
+        }
+      }
     }
 
     .nav-primary {
+      position: static;
+      display: block;
+      height: auto;
       width: $nav;
       background-color: theme-color("a");
       padding-right: 1rem;
@@ -173,6 +258,8 @@
         justify-content: flex-end;
 
         li {
+          width: auto;
+
           a {
             display: block;
             font-size: 1.4rem;
@@ -182,6 +269,10 @@
             border-bottom: 2px solid theme-color("n");
             width: 3rem;
             height: 3rem;
+
+            &[data-tippy-content="Tienda"] svg {
+              margin-top: 0.5rem;
+            }
 
             &[data-tippy-content="Contacto"] svg {
               margin-top: 0.5rem;
@@ -203,9 +294,19 @@
             &:hover {
               background-color: theme-color("b");
             }
+
+            svg {
+              &.bg path {
+                fill: theme-color("a");
+              }
+            }
+
+            .title {
+              display: none;
+            }
           }
 
-          &:nth-child(3) a {
+          &:nth-child(4) a {
             border-right: 2px solid theme-color("n");
           }
 

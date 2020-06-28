@@ -14,11 +14,14 @@ export default {
       });
     });
 
-    // amburger
+    // hamburger
     // ------------------
 
     $('.hamburger').click(function() {
       $(this).toggleClass('is-active');
+      $('.nav-primary').toggleClass('desplegado');
+      $('body').toggleClass('desplegado');
+
     });
 
     // TOOLTIPS
@@ -96,10 +99,13 @@ export default {
     }
 
     setTimeout(function () {
-      setBannerMargin()
-    }, 70);
+      viewportWidth = w.width();
+      if (viewportWidth >= 768) {
+        setBannerMargin()
+      }
+    }, 100);
 
-    window.onresize = function(){
+    window.onresize = function() {
       setBannerMargin()
     };
 
