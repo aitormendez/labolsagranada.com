@@ -20,6 +20,8 @@
 
 input[type="text"],
 input[type="email"],
+input[type="tel"],
+input[type="password"],
 textarea {
   color: theme-color("n");
   border: none;
@@ -39,5 +41,39 @@ textarea {
       color: theme-color("g3");
     }
   }
+
+  .woocommerce & {
+    background-color: theme-color("b");
+    width: 100%;
+  }
 }
 
+.woocommerce-MyAccount-navigation {
+  ul {
+    padding-left: 0;
+    list-style-type: none;
+
+    li {
+      border-bottom: 1px solid theme-color("n");
+      background-color: #fff;
+
+      &:first-child {
+        border-top: 1px solid theme-color("n");
+      }
+
+      a {
+        display: block;
+        color: theme-color("n");
+        padding: 0.2em 0.5em;
+
+        &:hover {
+          background-color: theme-color("a");
+        }
+      }
+
+      &.is-active a {
+        background-color: theme-color("g4");
+      }
+    }
+  }
+}
