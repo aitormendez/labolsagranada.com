@@ -1,12 +1,12 @@
 <footer class="content-info container-fluid">
   <div clas="row">
-    <div class="col-md-8 offset-md-2 d-flex">
+    <div class="navi col-md-8 offset-md-2 d-flex">
       @if (has_nav_menu('footer_navigation'))
-    {!! wp_nav_menu(['theme_location' => 'footer_navigation', 'menu_class' => 'nav']) !!}
+    {!! wp_nav_menu(['theme_location' => 'footer_navigation', 'menu_class' => 'nav mb-5 mb-md-0']) !!}
       @endif
       @php dynamic_sidebar('sidebar-footer') @endphp
 
-      <div class="logo text-b">
+      <div class="logo">
         @svg('campana')
       </div>
 
