@@ -33,7 +33,7 @@
       "type": "package",
       "package": {
         "name": "advanced-custom-fields/advanced-custom-fields-pro",
-        "version": "5.8.11",
+        "version": "5.8.12",
         "type": "wordpress-plugin",
         "dist": {
           "type": "zip",
@@ -92,12 +92,12 @@
     "wpackagist-plugin/woocommerce": "*",
     "stoutlogic/acf-builder": "^1.9",
     "soberwp/intervention": "^1.2",
-    "wpackagist-plugin/disable-comments": "^1.10"
+    "wpackagist-plugin/disable-comments": "^1.10",
+    "wpackagist-plugin/gdpr-cookie-compliance": "*"
   },
   "require-dev": {
     "squizlabs/php_codesniffer": "^3.5.4",
     "roave/security-advisories": "dev-master",
-    "wpackagist-plugin/fakerpress": "*",
     "wpackagist-plugin/query-monitor": "^3.1"
   },
   "config": {

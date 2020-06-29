@@ -1,0 +1,45 @@
+.content-info {
+  padding: 2rem;
+  background-color: theme-color("n");
+
+  .menu-footer-container {
+    display: flex;
+  }
+
+  a {
+    color: theme-color("g4");
+
+    &:hover {
+      color: theme-color("a");
+    }
+  }
+
+  ul {
+    li {
+      width: 100%;
+    }
+  }
+
+  .logo {
+    width: 70px;
+    margin-right: 2rem;
+
+    svg path {
+      fill: theme-color("a");
+    }
+  }
+
+  .direccion {
+    width: 200px;
+
+    .nombre {
+      font-family: $ff-display;
+      font-size: 2rem;
+    }
+
+    p {
+      margin-bottom: 0;
+      font-weight: 200;
+    }
+  }
+}
